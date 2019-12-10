@@ -4,6 +4,8 @@ import "fmt"
 
 import "math"
 
+import "time"
+
 func main() {
 	start := time.Now()
 

@@ -6,6 +6,7 @@ import (
 	"math"
 	"strconv"
 	"strings"
+	"time"
 )
 
 func main() {
@@ -21,8 +22,6 @@ func main() {
 
 	s := strings.Fields(dataString)
 
-	fmt.Println(s)
-
 	for _, value := range s {
 		float, _ := strconv.ParseFloat(value, 64)
 		totalFuel = totalFuel + calculateFuelForFuel(float)
@@ -35,12 +34,10 @@ func main() {
 	fmt.Println("Execution Time: %s", elapsed)
 }
 
-func calculateFuelForFuel(massInput float64) float64{
+func calculateFuelForFuel(massInput float64) float64 {
 	var fuelreq float64 = math.Floor(massInput/3) - 2
 	if fuelreq < 1 {
 		return 0
 	}
-	CurrentCalcFuelReq := fmt.Sprintf("%f", fuelreq)
-	fmt.Println("Output:", CurrentCalcFuelReq)
 	return fuelreq + calculateFuelForFuel(fuelreq)
 }

@@ -6,6 +6,7 @@ import (
 	"math"
 	"strconv"
 	"strings"
+	"time"
 )
 
 func main() {
@@ -20,8 +21,6 @@ func main() {
 	dataString := string(data)
 
 	s := strings.Fields(dataString)
-
-	fmt.Println(s)
 
 	for _, value := range s {
 		float, _ := strconv.ParseFloat(value, 64)
