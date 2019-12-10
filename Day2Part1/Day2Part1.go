@@ -8,6 +8,7 @@ import (
 )
 
 func main() {
+	start := time.Now()
 	addCode := "1"
 	multiplyCode := "2"
 	endCode := "99"
@@ -43,6 +44,8 @@ func main() {
 	}
 
 	fmt.Println("The answer is: ", s[0])
+	elapsed := time.Since(start)
+	fmt.Println("Execution Time: %s", elapsed)
 }
 
 func add(inval1 int, inval2 int, storloc int, s []string) {

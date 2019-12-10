@@ -9,6 +9,7 @@ import (
 )
 
 func main() {
+	start := time.Now()
 	var totalFuel float64 = 0
 
 	data, err := ioutil.ReadFile("input.txt")
@@ -31,4 +32,6 @@ func main() {
 	outputstring := fmt.Sprintf("%f", totalFuel)
 
 	fmt.Println("Output:", outputstring)
+	elapsed := time.Since(start)
+	fmt.Println("Execution Time: %s", elapsed)
 }
