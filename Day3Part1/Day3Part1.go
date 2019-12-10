@@ -30,21 +30,21 @@ func main() {
 	fmt.Println("Execution Time: %s", elapsed)
 }
 
-func convertDirectionsToMapOfCoordinates(directions []string) map[int]wireCoordinate{
+func convertDirectionsToMapOfCoordinates(directions []string) map[int]wireCoordinate {
 	currentX := 0
 	currentY := 0
 
-	var wire map[int]wireCoordinate; 
-	for dirAndLength := range directions{
+	var wire map[int]wireCoordinate
+	for _, dirAndLength := range directions {
 		length = strconv.Atoi(dirAndLength[1:])
-		if dirAndLength[0] == 'U'{
-			
-		}else if dirAndLength[0] == 'D'{
+		if dirAndLength[0] == 'U' {
 
-		}else if dirAndLength[0] == 'L'{
-			
-		}else if dirAndLength[0] == 'R'{
-			
+		} else if dirAndLength[0] == 'D' {
+
+		} else if dirAndLength[0] == 'L' {
+
+		} else if dirAndLength[0] == 'R' {
+
 		}
 	}
 }
